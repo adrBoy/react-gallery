@@ -1,13 +1,13 @@
 require('normalize.css/normalize.css');
-require('styles/App.css');
+require('styles/App.scss');
 import React from 'react';
 
 // 获取图片数据
-var imagesData = require('_../data/imagesData.json_');
+var imagesData = require('../data/imagesData.json');
 
 // 图片信息转成图片 url
 function generateImgUrl(imgsDataArr) {
-  for (var i=0, j = imgsDataArr.length; i < j; i++){
+  for (var i = 0, j = imgsDataArr.length; i < j; i++){
     var singleImg = imgsDataArr[i];
     singleImg.imgUrl = require('../images/' +
         singleImg.fileName);
